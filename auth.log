@@ -210,3 +210,6 @@ Dec 10 20:30:02 alicia-VirtualBox CRON[6703]: pam_unix(cron:session): session cl
 Dec 10 20:35:30 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
 Dec 10 20:35:33 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
 Dec 10 20:35:33 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 20:35:33 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 12 20:35:33 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 13 20:35:33 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring

@@ -6,12 +6,12 @@
 body {
 	background: rgb(239, 238, 238);
 	font-family: Georgia, serif;
-	color: #fff;
+	color: rgb(0, 0, 0);
 	font-size: 14px;
 }
 
 a {
-	color: #a67885;
+	color: rgb(195, 185, 187);
 	text-decoration: none;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -22,7 +22,7 @@ a {
 
 a:hover,
 a.selected {
-	color: #480a1c;
+	color:#70153e;
 }
 
 h1,
@@ -31,7 +31,7 @@ h4,
 h5,
 h6 {
 	text-align: center;
-	color: #ccc;
+	color: rgb(0, 0, 0);
 	text-shadow: #000 1px 1px 2px;
 	margin-bottom: 5px;
 }
@@ -44,54 +44,76 @@ h2 {
 	font-size: 14px;
 }
 
-.sociales {
-	text-align: center;
-	margin-bottom: 20px;
-}
 
 #timeline {
-	width: 1000px;
-	height: 350px;
+	width: 1200px;
+	/* width: 1200px; */
+	/* height: 350px; */
+	/* height: 98vh; */
+	height: auto;
 	overflow: hidden;
-	margin: 100px auto;
+	margin: 50px auto;
 	position: relative;
 	background: url('../images/dot.gif') left 45px repeat-x;
 }
 
+#logblock{
+	float:left;
+	width:1150px;
+	overflow-y: auto;
+	height: 300px;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+	-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+	box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
 #dates {
-	width: 800px;
+	width: 1200px;
 	height: 80px;
 	overflow: hidden;
+	border-bottom: 4px solid rgb(195, 185, 187);
 }
 
 #dates li {
 	list-style: none;
 	float: left;
-	width: 150px;
-	height: 50px;
+	width: 350px;
+	height: 56px;
 	font-size: 26px;
 	text-align: center;
 	background: url('../images/biggerdot.png') center bottom no-repeat;
 }
 
 #dates a {
-	line-height: 38px;
+	line-height: 56px;
 	padding-bottom: 8px;
 }
 
 #dates .selected {
-	font-size: 46px;
+	font-size: 56px;
 }
 
 #issues {
-	width: 800px;
-	height: 350px;
+	background-color: whitesmoke;
+	width: 1150px;
+	padding: 30px 25px 25px 25px;
+	margin-top: 20px;
+	height: auto;
+	/* height: 350px; */
 	overflow: hidden;
 }
 
 #issues li {
-	width: 800px;
-	height: 350px;
+	width: 1200px;
+	/* height: 350px; */
 	list-style: none;
 	float: left;
 }
@@ -126,27 +148,48 @@ h2 {
 }
 
 #issues li h1 {
-	color: #ffcc00;
-	font-size: 48px;
-	margin: 20px 0;
-	text-shadow: #000 1px 1px 2px;
+	color: #000000;
+	font-family: Georgia, serif;
+	font-size: 30px;
+	margin: 0px 0;
 	text-align: left;
-	padding-left: 70px;
+	padding-left: 20px;
+	font-weight: normal;
 }
 
 #issues li p {
+	color: #000000;
+	font-family: Georgia, serif;
 	font-size: 14px;
 	margin-right: 70px;
 	margin-left: 70px;
 	font-weight: normal;
 	line-height: 22px;
-	text-shadow: #000 1px 1px 2px;
 }
+
+details{
+  	font-size: 16px;
+}
+
+details > summary {
+	padding: 2px 6px;
+	width: 15em;
+	background-color: #ddd;
+	border: 1px solid rgb(152, 152, 152);
+	border-radius: 6%;
+  }
+
+details > p {
+	background-color: #ddd;
+	padding: 2px 6px;
+	margin: 0;
+  }
 
 #grad_left,
 #grad_right {
-	width: 100px;
-	height: 350px;
+	width: 20px;
+	/* width: 100px; */
+	/* height: 350px; */
 	position: absolute;
 	top: 0;
 }
@@ -159,20 +202,6 @@ h2 {
 #grad_right {
 	right: 0;
 	background: url('../images/grad_right.png') repeat-y;
-}
-
-#next,
-#prev {
-	position: absolute;
-	top: 0;
-	font-size: 70px;
-	top: 170px;
-	width: 22px;
-	height: 38px;
-	background-position: 0 0;
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-	overflow: hidden;
 }
 
 #next:hover,
@@ -193,4 +222,16 @@ h2 {
 #next.disabled,
 #prev.disabled {
 	opacity: 0.2;
+}
+
+footer{
+	width: 1200px;
+	min-height: 5vh;
+	border-top: 4px solid rgb(195, 185, 187);
+	color: #70153e;
+	text-decoration: none;
+	text-align: center;
+	margin: 0px auto;
+	position: relative;
+  	bottom: 0;
 }

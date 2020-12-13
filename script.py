@@ -1,4 +1,3 @@
-
 import webbrowser 
 
 def askDate():
@@ -15,65 +14,16 @@ def askDate():
             print("Wrong Format")     
     return date
  
-def generatePage(string):
-    dateString,dataString=codeString()
+def generatePage(date,data):
+    dateString,dataString=codeString(date,data)
     page = 'presentation.html'
     f = open(page,'w')
-    # message = """<html>
-    # <head></head>
-    # <body>
-    # <h1>"""+name+"""</h1><ul style="list-style-type:none;">"""+string+"""</ul>
-    # </body>
-    # </html>"""
-
-    # message="""
-    # <head>
-    # <meta charset="utf-8">
-    # <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    # <meta name="author" content="Made with ❤ by Jorge Epuñan - @csslab">
-
-    # <title>Logs Analysis</title>
-    # <link rel="stylesheet" href="style.css" media="screen" />
-    # <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    # <script src="code.js"></script>
-    # <script>
-    # $(function(){
-    # $().timelinr({
-    # arrowKeys: 'true'
-    # })
-    # });
-    # </script>
-    # </head>
-
-    # <body>
-
-    # <div id="timeline">
-    # <ul id="dates">
-    # <li><a href="#1">Dec 08</a></li>
-    # <li><a href="#2">Dec 09</a></li>
-    # <li><a href="#3">Dec 10</a></li>
-    # <li><a href="#4">Dec 11</a></li>
-    # <li><a href="#4">Dec 12</a></li>
-    # </ul>
-    # <ul id="issues">
-    # <li id="1">
-    # <h1>Dec 08</h1>
-    # <p>Dec 09</p>
-    # </li>
-    # <li id="2">
-    # <h1>1984</h1>
-    # <p>Dec 09</p>
-    # </li>
-    # </ul>
-    # </div>
-    # </body>"""
 
     message="""
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="Made with ❤ by Jorge Epuñan - @csslab">
-
     <title>Logs Analysis</title>
     <link rel="stylesheet" href="style.css" media="screen" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -86,9 +36,7 @@ def generatePage(string):
     });
     </script>
     </head>
-
     <body>
-
     <div id="timeline">
     <ul id="dates">"""+str(dateString)+"""
     </ul>
@@ -96,6 +44,7 @@ def generatePage(string):
     """+str(dataString)+"""
     </ul>
     </div>
+    <footer><img src="VUlogo.png" alt="VUlogo" width="20%" height="auto"><p>©️ Alicia Fernández and Unai Ruiz</p></footer>
     </body>"""
 
     
@@ -103,16 +52,16 @@ def generatePage(string):
     f.close()
     webbrowser.open_new_tab('/Users/alicia/Mega/SecureInternetTech/SecureInternetTechVU/presentation.html')
 
-def codeString():
-    dates=['Dec 13','Dec 14','Dec 15','Dec 16','Dec 17']
-    datas=["<p>casa</p>","<p>coche</p>","<p>unai</p>","<p>puto</p>","<p>bobo </p>"]
+def codeString(date,data):
+    # dates=['Dec 13','Dec 14']
+    # datas=["<p>casa</p>","<p>coche</p>"]
     dateString=""
     dataString=""
     
     i=0
-    for dat in dates:
+    for dat in date:
         dateString=dateString+"""<li><a href="#"""+str(i+1)+"""">"""+str(dat)+"""</a></li>"""
-        dataString=dataString+"""<li id="""+'"'+str(i)+'"'+"""><h1>"""+str(dat)+"""</h1>"""+str(datas[i])+"""</li>"""
+        dataString=dataString+"""<li id="""+'"'+str(i)+'"'+"""><h1>Auth.log</h1><br/><div id="logblock">"""+str(data[i])+"""</div></li>"""
         i+=1
 
     return str(dateString),str(dataString)
@@ -122,9 +71,9 @@ def authLog(startDate):
     # splittedAuthEvents = [] # Array which elements are a string formed by all events in each day [day1, day2, day3, ...]
     authEvents = readFile("auth.log") # In Ubuntu '/var/log/auth.log'                    
     authEvents = firstDate(startDate, authEvents)
-    splittedAuthEvents = splitDays(authEvents)   # En un futuro hacer return de los arrays
+    splittedAuthEvents,dayArray = splitDays(authEvents)   # En un futuro hacer return de los arrays
     authStr = addFformat(authEvents)
-    return authStr
+    return splittedAuthEvents,dayArray
 
 def readFile(fileName):
     fileObj = open(fileName, "r")
@@ -145,16 +94,19 @@ def splitDays(events):
     day = ''
     dayString = ''
     dayArray =[]
+    indexArray=[events[0].split()[0]+' '+events[0].split()[1]]
     for event in events:
-        if event.split(' ')[1] != day:
+        if event.split()[1] != day and event != events[0]:
             dayArray.append(dayString)
+            indexArray.append(event.split()[0]+' '+event.split()[1])
             dayString = ''
-        day = event.split(' ')[1]
-        dayString=dayString+"<li>"+event+"<li>"
+        day = event.split()[1]
+        dayString=dayString+"""<p><strong class="hour">"""+event.split()[0]+' '+event.split()[1]+":</strong> "+event.split(' ',3)[3]+"</p>"
         if event == events[-1]:
             dayArray.append(dayString)
             dayString = ''
-    return dayArray
+    return indexArray,dayArray
+
 
 def addFformat(events): #a la mierda
     string=""
@@ -164,8 +116,8 @@ def addFformat(events): #a la mierda
  
 def main():
     startDate='Dec 8'
-    authStr = authLog(startDate)
-    generatePage(authStr)
+    date,data = authLog(startDate)
+    generatePage(date,data)
   
 if __name__ == "__main__":
     main()
