@@ -25,9 +25,9 @@ def generatePage(date,data):
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="Made with ❤ by Jorge Epuñan - @csslab">
     <title>Logs Analysis</title>
-    <link rel="stylesheet" href="style.css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" media="screen" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="code.js"></script>
+    <script src="js/code.js"></script>
     <script>
     $(function(){
     $().timelinr({
@@ -44,7 +44,7 @@ def generatePage(date,data):
     """+str(dataString)+"""
     </ul>
     </div>
-    <footer><img src="VUlogo.png" alt="VUlogo" width="20%" height="auto"><p>©️ Alicia Fernández and Unai Ruiz</p></footer>
+    <footer><img src="images/VUlogo.png" alt="VUlogo" width="20%" height="auto"><p>©️ Alicia Fernández and Unai Ruiz</p></footer>
     </body>"""
 
     
