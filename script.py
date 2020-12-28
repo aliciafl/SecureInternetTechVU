@@ -33,7 +33,6 @@ def generatePage(date,data):
     <footer><img src="images/VUlogo.png" alt="VUlogo" width="20%" height="auto"><p>©️ Alicia Fernández and Unai Ruiz</p></footer>
     </body>"""
 
-    
     f.write(message)
     f.close()
     webbrowser.open_new_tab('presentation.html')
@@ -56,13 +55,12 @@ def codeString(date,data):
 
 # Logic
 
-def authLog(startDate):
-    # splittedAuthEvents = [] # Array which elements are a string formed by all events in each day [day1, day2, day3, ...]
-    authEvents = readFile("logs/auth.log") # In Ubuntu '/var/log/auth.log'                    
-    authEvents = firstDate(startDate, authEvents)
-    splittedAuthEvents,dayArray = splitDays(authEvents)   # En un futuro hacer return de los arrays
-    authStr = addFformat(authEvents)
-    return splittedAuthEvents,dayArray
+def authLog(firstDate, lastDate):
+    authEvents = readFile("logs/auth.log") # In Ubuntu '/var/log/auth.log'
+    if firstDate != '' and lastDate != '':                    
+        authEvents = filterbyDates(firstDate, lastDate, authEvents)
+    splittedAuthEvents, indexAuth = splitDays(authEvents)   # En un futuro hacer return de los arrays
+    return splittedAuthEvents, indexAuth
 
 def readFile(fileName):
     fileObj = open(fileName, "r")
@@ -70,37 +68,39 @@ def readFile(fileName):
     fileObj.close()
     return lines
 
-def firstDate(date, events):
+def filterbyDates(firstDate, lastDate, events):
     months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     newEvents=[]
     for event in events:
-        if (int(date.split()[1]) <= int(event.split()[1])) and (months.index(date.split()[0]) <= months.index(event.split()[0])):
-            # print(event)
-            newEvents.append(event)
+        if (months.index((firstDate.split()[0]).capitalize()) <= months.index(event.split()[0])) and (months.index((lastDate.split()[0]).capitalize()) >= months.index(event.split()[0])):
+            if (months.index((firstDate.split()[0]).capitalize()) == months.index((lastDate.split()[0]).capitalize())):
+                if (int(firstDate.split()[1]) <= int(event.split()[1]) <= int(lastDate.split()[1])):
+                    newEvents.append(event)
+            else:
+                if (months.index((firstDate.split()[0]).capitalize()) == months.index(event.split()[0])) and (int(firstDate.split()[1]) <= int(event.split()[1])):
+                    newEvents.append(event)
+                if (months.index((firstDate.split()[0]).capitalize()) < months.index(event.split()[0]) < months.index((lastDate.split()[0]).capitalize())):
+                    newEvents.append(event)
+                if (months.index((lastDate.split()[0]).capitalize()) == months.index(event.split()[0])) and (int(lastDate.split()[1]) >= int(event.split()[1])):
+                    newEvents.append(event)
     return newEvents
 
 def splitDays(events):
     day = ''
     dayString = ''
     dayArray =[]
-    indexArray=[events[0].split()[0]+' '+events[0].split()[1]]
+    indexArray=[events[0][:6]]
     for event in events:
         if event.split()[1] != day and event != events[0]:
             dayArray.append(dayString)
-            indexArray.append(event.split()[0]+' '+event.split()[1])
+            indexArray.append(event[:6])
             dayString = ''
         day = event.split()[1]
-        dayString=dayString+"""<p><strong class="hour">"""+event.split()[0]+' '+event.split()[1]+":</strong> "+event.split(' ',3)[3]+"</p>"
+        dayString=dayString+"""<p><strong class="hour">"""+event[7:15]+"></strong> "+event[16:]+"</p>"
         if event == events[-1]:
             dayArray.append(dayString)
             dayString = ''
-    return indexArray,dayArray
-
-def addFformat(events):
-    string=""
-    for event in events:
-        string=string+"<li>"+event+"</li>"
-    return string
+    return dayArray, indexArray
  
 # **************************************************************** Faillog ****************************************************************
 
@@ -109,25 +109,67 @@ def addFformat(events):
 
 # ***************************************************************** Dates *****************************************************************
 
-def askDate():
+def askDate(first):
     months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     invalidDate = True
+    spaceNumber = 0
     while invalidDate:
-        date = input("Introduce the desired first day in the following format: mmm dd (left blank if no filter desired) :")
-        if date.isspace:
-            if (date=='') or (date.split(' ')[0] not in months) or ((date.split(' ')[1]).isnumeric and (0 < int(date.split(' ')[1]) < 32)) :
-                invalidDate = False
-            else:
-                print("Wrong Format")
+        if first == True:
+            date = input("Introduce the desired first day in the following format: mmm dd (left blank if no filter desired) :")
         else:
-            print("Wrong Format")     
+            date = input("Introduce the desired last day in the following format: mmm dd (left blank if no filter desired) :")
+        for i in date:
+            if i == ' ':
+                spaceNumber += 1
+        if (date==''):
+            invalidDate = False
+            print("buena fecha vacia")
+        else:
+                if spaceNumber == 1 and len(date.split()) == 2:
+                    if (date.split()[0].capitalize() in months):
+                        if ((date.split()[1]).isnumeric()):
+                            if(0 < int(date.split()[1]) < 32):
+                                invalidDate = False
+                            else:
+                                print("Wrong Format dia fuera de rango")
+                        else:
+                            print("Wrong Format dia tiene que ser un numero")    
+                    else:
+                        print("Wrong Format mes incorrecto")  
+                else:
+                    print("Wrong format - wrong number of arguments (take care with extra spaces)")
+                spaceNumber = 0
     return date
+
+def compareDates(firstDate, lastDate):
+    months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    if firstDate == "" or lastDate == "":
+        return False
+    if (months.index((firstDate.split()[0]).capitalize()) == months.index((lastDate.split()[0]).capitalize())):
+        if (int(firstDate.split()[1]) <= int(lastDate.split()[1])):
+            return False
+        else:
+            print("Start date must be previous than last date.")
+            return True
+    if (months.index((firstDate.split()[0]).capitalize()) <= months.index((lastDate.split()[0]).capitalize())):
+        return False
+    else:
+        print("Start date must be previous than last date.")
+        return True
+
 
 # ****************************************************************** Main ******************************************************************
 
 def main():
-    startDate='Dec 8'
-    date,data = authLog(startDate)
+    invalidDates = True
+    while invalidDates:
+        firstDate=askDate(True)
+        lastDate=askDate(False)
+        invalidDates = compareDates(firstDate, lastDate)
+    data, date = authLog(firstDate, lastDate)
+    print(data)
+    print("=======================================")
+    print(date)
     generatePage(date,data)
   
 if __name__ == "__main__":
