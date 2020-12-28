@@ -1,5 +1,5 @@
 import webbrowser 
- 
+
 def generatePage(date,data):
     dateString,dataString=codeString(date,data)
     page = 'presentation.html'
@@ -33,7 +33,7 @@ def generatePage(date,data):
     <footer><img src="images/VUlogo.png" alt="VUlogo" width="20%" height="auto"><p>©️ Alicia Fernández and Unai Ruiz</p></footer>
     </body>"""
 
-    f.write(message)
+    f.write(message.encode('cp850','replace').decode('cp850')) # print(data.decode('utf-8').encode('cp850','replace').decode('cp850'))
     f.close()
     webbrowser.open_new_tab('presentation.html')
 
@@ -55,12 +55,12 @@ def codeString(date,data):
 
 # Logic
 
-def authLog(firstDate, lastDate):
-    authEvents = readFile("logs/auth.log") # In Ubuntu '/var/log/auth.log'
+def analizeLog(firstDate, lastDate, filepath):
+    events = readFile(filepath) 
     if firstDate != '' and lastDate != '':                    
-        authEvents = filterbyDates(firstDate, lastDate, authEvents)
-    splittedAuthEvents, indexAuth = splitDays(authEvents)   # En un futuro hacer return de los arrays
-    return splittedAuthEvents, indexAuth
+        events = filterbyDates(firstDate, lastDate, events)
+    data, date = splitDays(events)   # En un futuro hacer return de los arrays
+    return data, date
 
 def readFile(fileName):
     fileObj = open(fileName, "r")
@@ -96,12 +96,12 @@ def splitDays(events):
             indexArray.append(event[:6])
             dayString = ''
         day = event.split()[1]
-        dayString=dayString+"""<p><strong class="hour">"""+event[7:15]+"></strong> "+event[16:]+"</p>"
+        dayString=dayString+"""<p><strong class="hour">"""+event[7:15]+"</strong> "+event[16:]+"</p>"
         if event == events[-1]:
             dayArray.append(dayString)
             dayString = ''
     return dayArray, indexArray
- 
+
 # **************************************************************** Faillog ****************************************************************
 
 
@@ -166,11 +166,9 @@ def main():
         firstDate=askDate(True)
         lastDate=askDate(False)
         invalidDates = compareDates(firstDate, lastDate)
-    data, date = authLog(firstDate, lastDate)
-    print(data)
-    print("=======================================")
-    print(date)
-    generatePage(date,data)
+    authData, authDate = analizeLog(firstDate, lastDate,'logs/auth.log') # In Ubuntu '/var/log/auth.log'
+    # kernData, kernDate = analizeLog(firstDate, lastDate,'logs/kern.log') # In Ubuntu '/var/log/kern.log'
+    generatePage(authDate, authData)
   
 if __name__ == "__main__":
     main()
