@@ -1,18 +1,4 @@
 import webbrowser 
-
-def askDate():
-    months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-    invalidDate = True
-    while invalidDate:
-        date = input("Introduce the desired first day in the following format: mmm dd (left blank if no filter desired) :")
-        if date.isspace:
-            if (date=='') or (date.split(' ')[0] not in months) or ((date.split(' ')[1]).isnumeric and (0 < int(date.split(' ')[1]) < 32)) :
-                invalidDate = False
-            else:
-                print("Wrong Format")
-        else:
-            print("Wrong Format")     
-    return date
  
 def generatePage(date,data):
     dateString,dataString=codeString(date,data)
@@ -23,7 +9,7 @@ def generatePage(date,data):
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="author" content="Made with ❤ by Jorge Epuñan - @csslab">
+    <meta name="author" content="Made by Alicia and Unai">
     <title>Logs Analysis</title>
     <link rel="stylesheet" href="css/style.css" media="screen" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -50,11 +36,13 @@ def generatePage(date,data):
     
     f.write(message)
     f.close()
-    webbrowser.open_new_tab('/Users/alicia/Mega/SecureInternetTech/SecureInternetTechVU/presentation.html')
+    webbrowser.open_new_tab('presentation.html')
+
+# **************************************************************** Auth.log ****************************************************************
+
+# HTML
 
 def codeString(date,data):
-    # dates=['Dec 13','Dec 14']
-    # datas=["<p>casa</p>","<p>coche</p>"]
     dateString=""
     dataString=""
     
@@ -66,10 +54,11 @@ def codeString(date,data):
 
     return str(dateString),str(dataString)
 
+# Logic
 
 def authLog(startDate):
     # splittedAuthEvents = [] # Array which elements are a string formed by all events in each day [day1, day2, day3, ...]
-    authEvents = readFile("auth.log") # In Ubuntu '/var/log/auth.log'                    
+    authEvents = readFile("logs/auth.log") # In Ubuntu '/var/log/auth.log'                    
     authEvents = firstDate(startDate, authEvents)
     splittedAuthEvents,dayArray = splitDays(authEvents)   # En un futuro hacer return de los arrays
     authStr = addFformat(authEvents)
@@ -107,13 +96,35 @@ def splitDays(events):
             dayString = ''
     return indexArray,dayArray
 
-
-def addFformat(events): #a la mierda
+def addFformat(events):
     string=""
     for event in events:
         string=string+"<li>"+event+"</li>"
     return string
  
+# **************************************************************** Faillog ****************************************************************
+
+
+
+
+# ***************************************************************** Dates *****************************************************************
+
+def askDate():
+    months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    invalidDate = True
+    while invalidDate:
+        date = input("Introduce the desired first day in the following format: mmm dd (left blank if no filter desired) :")
+        if date.isspace:
+            if (date=='') or (date.split(' ')[0] not in months) or ((date.split(' ')[1]).isnumeric and (0 < int(date.split(' ')[1]) < 32)) :
+                invalidDate = False
+            else:
+                print("Wrong Format")
+        else:
+            print("Wrong Format")     
+    return date
+
+# ****************************************************************** Main ******************************************************************
+
 def main():
     startDate='Dec 8'
     date,data = authLog(startDate)
@@ -121,15 +132,3 @@ def main():
   
 if __name__ == "__main__":
     main()
-    
-
-# def authlog(logName):
-#     auth = input("Do you want to analyze "+logName+"? [Y/N]")
-#     if auth == "Y" or auth == "y" or auth=="yes" or auth=="Yes" :
-#         return True
-#     else:
-#         return False
-
-
-# def filterEvents(events):
-#     return events

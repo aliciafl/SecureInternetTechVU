@@ -1,0 +1,82 @@
+Ubiquity 20.04.15.2
+/usr/lib/ubiquity/ubiquity/frontend/gtk_ui.py:54: PyGIWarning: Gtk was imported without specifying a version first. Use gi.require_version('Gtk', '3.0') before import to ensure that the right version gets loaded.
+  from gi.repository import Gtk, Gdk, GObject, GLib, Atk, Gio
+/usr/lib/ubiquity/ubiquity/frontend/gtk_components/nmwidgets.py:5: PyGIWarning: NM was imported without specifying a version first. Use gi.require_version('NM', '1.0') before import to ensure that the right version gets loaded.
+  from gi.repository import NM, NMA
+/usr/lib/ubiquity/ubiquity/frontend/gtk_components/nmwidgets.py:5: PyGIWarning: NMA was imported without specifying a version first. Use gi.require_version('NMA', '1.0') before import to ensure that the right version gets loaded.
+  from gi.repository import NM, NMA
+
+(ubiquity:1579): Gtk-WARNING **: 18:47:32.972: GtkBox does not have a child property called left_attach
+
+(ubiquity:1579): Gtk-WARNING **: 18:47:32.972: GtkBox does not have a child property called width
+
+(ubiquity:1579): Gtk-WARNING **: 18:47:32.972: GtkBox does not have a child property called height
+
+(ubiquity:1579): Gtk-WARNING **: 18:47:32.972: GtkBox does not have a child property called width
+
+(ubiquity:1579): Gtk-WARNING **: 18:47:32.972: GtkBox does not have a child property called height
+
+(ubiquity:1579): Gtk-WARNING **: 18:47:32.972: GtkGrid does not have a child property called expand
+
+(ubiquity:1579): Gtk-WARNING **: 18:47:32.972: GtkGrid does not have a child property called fill
+
+(ubiquity:1579): Gtk-WARNING **: 18:47:32.973: GtkGrid does not have a child property called position
+/usr/lib/ubiquity/plugins/ubi-timezone.py:195: PyGIWarning: TimezoneMap was imported without specifying a version first. Use gi.require_version('TimezoneMap', '1.0') before import to ensure that the right version gets loaded.
+  from gi.repository import TimezoneMap
+No such schema “org.gnome.nautilus.desktop”
+expected value:
+  (empty input)
+  ^
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+update_release_notes_label()
+/usr/lib/ubiquity/ubiquity/misc.py:698: PyGIWarning: Xkl was imported without specifying a version first. Use gi.require_version('Xkl', '1.0') before import to ensure that the right version gets loaded.
+  from gi.repository import Xkl, GdkX11
+update_release_notes_label()
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+Could not translate page (prepare): 'NoneType' object has no attribute 'replace'
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+No such schema “com.canonical.indicator.session”
+No such schema “com.canonical.indicator.session”
+No such schema “com.canonical.indicator.session”
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+/usr/lib/ubiquity/plugins/ubi-timezone.py:98: PyGIWarning: Soup was imported without specifying a version first. Use gi.require_version('Soup', '2.4') before import to ensure that the right version gets loaded.
+  from gi.repository import Gtk, GObject, GLib, Soup
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+/usr/lib/ubiquity/plugins/ubi-language.py:303: Warning: Source ID 95 was not found when attempting to remove it
+  GLib.source_remove(self.timeout_id)
+/usr/lib/ubiquity/ubiquity/frontend/gtk_ui.py:570: Warning: Source ID 91 was not found when attempting to remove it
+  GLib.source_remove(self.timeout_id)
+/usr/lib/ubiquity/plugins/ubi-language.py:303: Warning: Source ID 95 was not found when attempting to remove it
+  GLib.source_remove(self.timeout_id)
+update_release_notes_label()
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_RUNTIME_DIR (/run/user/999) is not owned by us (uid 0), but by uid 999! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+
+(ubiquity:1579): Gtk-WARNING **: 20:55:02.713: VteTerminal 0x1f7dbd0 reported min size 12 and natural size 7 in get_preferred_width(); natural size must be >= min size
+
+(ubiquity:1579): Gtk-CRITICAL **: 20:55:02.717: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(ubiquity:1579): Gtk-CRITICAL **: 20:55:06.751: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(ubiquity:1579): Gtk-CRITICAL **: 20:55:40.467: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(ubiquity:1579): Gtk-CRITICAL **: 20:57:20.848: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(ubiquity:1579): Gtk-CRITICAL **: 20:58:55.909: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(ubiquity:1579): Gtk-CRITICAL **: 20:59:10.672: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(ubiquity:1579): Gtk-CRITICAL **: 20:59:10.705: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar

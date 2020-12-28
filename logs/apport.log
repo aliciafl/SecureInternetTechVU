@@ -1,0 +1,9 @@
+ERROR: apport (pid 42858) Thu Dec 10 15:13:59 2020: host pid 42746 crashed in a separate mount namespace, ignoring
+ERROR: apport (pid 43316) Thu Dec 10 15:14:24 2020: host pid 43163 crashed in a separate mount namespace, ignoring
+ERROR: apport (pid 2527) Thu Dec 10 17:02:22 2020: host pid 1470 crashed in a separate mount namespace, ignoring
+ERROR: apport (pid 2614) Thu Dec 10 17:03:11 2020: host pid 2528 crashed in a separate mount namespace, ignoring
+ERROR: apport (pid 2964) Thu Dec 10 17:03:32 2020: host pid 2877 crashed in a separate mount namespace, ignoring
+ERROR: apport (pid 3899) Thu Dec 10 17:06:55 2020: host pid 3562 crashed in a separate mount namespace, ignoring
+ERROR: apport (pid 4278) Thu Dec 10 17:09:08 2020: host pid 3941 crashed in a separate mount namespace, ignoring
+ERROR: apport (pid 4776) Thu Dec 10 17:10:18 2020: host pid 4428 crashed in a separate mount namespace, ignoring
+ERROR: apport (pid 5146) Thu Dec 10 17:10:35 2020: host pid 4805 crashed in a separate mount namespace, ignoring
