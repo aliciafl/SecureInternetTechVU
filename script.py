@@ -1,7 +1,13 @@
 import webbrowser 
 
+
+#line 1 prueba
+
+#line 2 prueba 
+
+
 def generatePage(date,data):
-    dateString,dataString=codeString(date,data)
+    authDateString,authDataString=codeString(date,data,'syslog')
     page = 'presentation.html'
     f = open(page,'w')
 
@@ -24,10 +30,10 @@ def generatePage(date,data):
     </head>
     <body>
     <div id="timeline">
-    <ul id="dates">"""+str(dateString)+"""
+    <ul id="dates">"""+str(authDateString)+"""
     </ul>
     <ul id="issues">
-    """+str(dataString)+"""
+    """+str(authDataString)+"""
     </ul>
     </div>
     <footer><img src="images/VUlogo.png" alt="VUlogo" width="20%" height="auto"><p>©️ Alicia Fernández and Unai Ruiz</p></footer>
@@ -41,14 +47,14 @@ def generatePage(date,data):
 
 # HTML
 
-def codeString(date,data):
+def codeString(date,data,header):
     dateString=""
     dataString=""
     
     i=0
     for dat in date:
         dateString=dateString+"""<li><a href="#"""+str(i+1)+"""">"""+str(dat)+"""</a></li>"""
-        dataString=dataString+"""<li id="""+'"'+str(i)+'"'+"""><h1>Auth.log</h1><br/><div id="logblock">"""+str(data[i])+"""</div></li>"""
+        dataString=dataString+"""<li id="""+'"'+str(i)+'"'+"""><h1>"""+header+"""</h1><br/><div id="logblock">"""+str(data[i])+"""</div></li>"""
         i+=1
 
     return str(dateString),str(dataString)
@@ -123,7 +129,6 @@ def askDate(first):
                 spaceNumber += 1
         if (date==''):
             invalidDate = False
-            print("buena fecha vacia")
         else:
                 if spaceNumber == 1 and len(date.split()) == 2:
                     if (date.split()[0].capitalize() in months):
@@ -166,9 +171,10 @@ def main():
         firstDate=askDate(True)
         lastDate=askDate(False)
         invalidDates = compareDates(firstDate, lastDate)
-    authData, authDate = analizeLog(firstDate, lastDate,'logs/auth.log') # In Ubuntu '/var/log/auth.log'
+    # authData, authDate = analizeLog(firstDate, lastDate,'logs/auth.log') # In Ubuntu '/var/log/auth.log'
     # kernData, kernDate = analizeLog(firstDate, lastDate,'logs/kern.log') # In Ubuntu '/var/log/kern.log'
-    generatePage(authDate, authData)
+    sysData, sysDate = analizeLog(firstDate, lastDate,'logs/syslog') # In Ubuntu '/var/log/syslog'
+    generatePage(sysDate, sysData)
   
 if __name__ == "__main__":
     main()
