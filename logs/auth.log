@@ -1,3 +1,4 @@
+Nov  9 21:39:24 alicia-VirtualBox systemd-logind[505]: New seat seat0.
 Dec  9 21:39:24 alicia-VirtualBox systemd-logind[505]: New seat seat0.
 Dec  9 21:39:24 alicia-VirtualBox systemd-logind[505]: Watching system buttons on /dev/input/event0 (Power Button)
 Dec  9 21:39:24 alicia-VirtualBox systemd-logind[505]: Watching system buttons on /dev/input/event1 (Sleep Button)
