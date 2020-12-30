@@ -12,8 +12,9 @@ def monthsConversion(month):
     months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     return months[int(month)-1]
  
-def generatePage(date,data):
-    authDateString,authDataString=codeString(date,data,'Auth.log')
+def generatePage(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogData,dpkgData):
+    authDateString,authDataString=codeString(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogData,dpkgData)
+    # authDateString,authDataString=codeString(authDate,kernDate,data,'Auth.log')
     page = 'presentation.html'
     f = open(page,'w')
 
@@ -48,22 +49,114 @@ def generatePage(date,data):
     
     f.write(message)
     f.close()
-    webbrowser.open_new_tab('presentation.html')
+    # webbrowser.open_new_tab('presentation.html')
 
 # **************************************************************** Auth.log ****************************************************************
 
 # HTML
 
-def codeString(date,data,header):
+def codeString(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogData,dpkgData):
+    months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    monthsDefs=[]
+    value=False
+    sameAuth=False
+    sameKern=False
+    sameSyslog=False
+    sameDpkg=False
+    dat=""  
+    authDatas=""
+    kernDatas=""
+    syslogDatas=""
+    dpkgDatas=""
     dateString=""
     dataString=""
-    
-    i=0
-    for dat in date:
-        print(dat)
-        dateString=dateString+"""<li><a href="#"""+str(i+1)+"""">"""+str(dat)+"""</a></li>"""
-        dataString=dataString+"""<li id="""+'"'+str(i)+'"'+"""><h1>"""+header+"""</h1><br/><div id="logblock">"""+str(data[i])+"""</div></li>"""
-        i+=1
+
+    #Generate array of months
+    for month in months:   
+        if month == authDate[0].split()[0] or month == kernDate[0].split()[0]:
+            value=True   
+        if value == True:
+            monthsDefs.append(month)
+    j=0;
+
+    for month in monthsDefs:       
+        for i in range(31):   
+
+            k=0
+            for auth in authDate:
+                dat=auth.split()[1] #Number
+                if dat == " ":
+                    dat=auth.split()[2]
+                if month == auth.split()[0] and str(i) == dat and sameAuth==False:
+                    print("Coincide"+month+str(i))
+                    sameAuth=True
+                    authDatas=authData[k]   
+                    dataString=dataString+"""<li id="""+'"'+str(j)+'"'+""">""" 
+                    dataString=dataString+"""<h1>"""+"Auth.log"+"""</h1><br/><div id="logblock">"""+str(authDatas)+"""</div>"""               
+                k=k+1
+            
+            k=0
+            for auth in syslogDate:
+                dat=auth.split()[1] #Number
+                if dat == " ":
+                    dat=auth.split()[2]
+                if month == auth.split()[0] and str(i) == dat and sameSyslog==False:
+                    print("Coincide"+month+str(i))
+                    sameSyslog=True
+                    syslogDatas=syslogData[k] 
+                    if sameAuth==False:  
+                        dataString=dataString+"""<li id="""+'"'+str(j)+'"'+""">""" 
+                    dataString=dataString+"""<h1>"""+"Syslog"+"""</h1><br/><div id="logblock">"""+str(syslogDatas)+"""</div>"""               
+                k=k+1 
+            
+            k=0
+            for auth in kernDate:
+                dat=auth.split()[1] #Number
+                if dat == " ":
+                    dat=auth.split()[2]
+                if month == auth.split()[0] and str(i) == dat and sameKern==False:
+                    print("Coincide"+month+str(i))
+                    sameKern=True
+                    kernDatas=kernData[k]    
+                    if sameAuth==False and sameSyslog==False:
+                        dataString=dataString+"""<li id="""+'"'+str(j)+'"'+""">""" 
+                    dataString=dataString+"""<h1>"""+"Kern.log"+"""</h1><br/><div id="logblock">"""+str(kernDatas)+"""</div>"""             
+                k=k+1
+
+            k=0
+            for auth in dpkgDate:
+                dat=auth.split()[1] #Number
+                if dat == " ":
+                    dat=auth.split()[2]
+                if month == auth.split()[0] and str(i) == dat and sameDpkg==False:
+                    print("Coincide"+month+str(i))
+                    sameDpkg=True
+                    dpkgDatas=dpkgData[k]    
+                    if sameAuth==False and sameSyslog==False and sameKern==False:
+                        dataString=dataString+"""<li id="""+'"'+str(j)+'"'+""">""" 
+                    dataString=dataString+"""<h1>"""+"dpkg.log"+"""</h1><br/><div id="logblock">"""+str(dpkgDatas)+"""</div>"""             
+                k=k+1
+
+            if sameAuth==True or sameKern==True or sameSyslog==True or sameDpkg==True:
+                dateString=dateString+"""<li><a href="#"""+str(j+1)+"""">"""+month+" "+str(i)+"""</a></li>"""
+                dataString=dataString+"""</li>"""
+                j=j+1
+                sameAuth=False
+                sameKern=False
+                sameSyslog=False
+                sameDpkg=False
+            
+            
+            # dataString=dataString+"""<li id="""+'"'+str(i)+'"'+"""><h1>"""+"Auth.log"+"""</h1><br/><div id="logblock">"""+str(datas)+"""</div></li>"""
+
+        
+            
+    # i=0
+    # for dat in date:
+    #     print(dat)
+    #     dateString=dateString+"""<li><a href="#"""+str(i+1)+"""">"""+str(dat)+"""</a></li>"""
+    #     dataString=dataString+"""<li id="""+'"'+str(i)+'"'+"""><h1>"""+header+"""</h1><br/><div id="logblock">"""+str(data[i])+"""</div></li>"""
+    #     i+=1
 
     return str(dateString),str(dataString)
 
@@ -124,8 +217,8 @@ def dpkgSplit(events):
     dataArray =[]
 
     for event in events:    #split0 date, split1 hour, split2... rest
-        date=(event.split()[0])[5]+(event.split()[0])[6]
-        date=monthsConversion(date)
+        date=(event.split()[0])[5:6]
+        date=monthsConversion(date)+' '+(event.split()[0])[8:9]
         print(date)
 
         dataString=dataString+"""<p><strong class="hour">"""+event.split()[1]+":</strong> "+event.split(' ',2)[2]+"</p>"
@@ -135,9 +228,7 @@ def dpkgSplit(events):
             dataString = ''
 
     return dataArray
-
-def dpkgConvertDates():
-    splittedAuthEvents,dayArray = splitDays(authEvents)
+    
 
 # ***************************************************************** Dates *****************************************************************
 
@@ -155,7 +246,7 @@ def askDate(first):
                 spaceNumber += 1
         if (date==''):
             invalidDate = False
-            print("buena fecha vacia")
+            # print("buena fecha vacia")
         else:
                 if spaceNumber == 1 and len(date.split()) == 2:
                     if (date.split()[0].capitalize() in months):
@@ -198,8 +289,9 @@ def main():
         lastDate=askDate(False)
         invalidDates = compareDates(firstDate, lastDate)
     authData, authDate = analizeLog(firstDate, lastDate,'logs/auth.log') # In Ubuntu '/var/log/auth.log'
-    # kernData, kernDate = analizeLog(firstDate, lastDate,'logs/kern.log') # In Ubuntu '/var/log/kern.log'
-    generatePage(authDate, authData)
+    kernData, kernDate = analizeLog(firstDate, lastDate,'logs/kern.log') # In Ubuntu '/var/log/kern.log'
+    syslogData, syslogDate = analizeLog(firstDate, lastDate,'logs/syslog') # In Ubuntu '/var/log/kern.log'
+    generatePage(authDate,kernDate,syslogDate,syslogDate,authData,kernData,syslogData,syslogData)
     # dpkgLog()
   
 if __name__ == "__main__":

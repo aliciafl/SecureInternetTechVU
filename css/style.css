@@ -61,7 +61,10 @@ h2 {
 	float:left;
 	width:1150px;
 	overflow-y: auto;
-	height: 300px;
+	overflow-x: auto;
+	height:auto;
+	max-height: 200px;
+	margin-bottom: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -103,7 +106,7 @@ h2 {
 
 #issues {
 	background-color: whitesmoke;
-	width: 1150px;
+	width: 1200px;
 	padding: 30px 25px 25px 25px;
 	margin-top: 20px;
 	height: auto;
