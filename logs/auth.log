@@ -1,8 +1,352 @@
-Sep 12 21:39:24 12Sep
-Dec  9 20:35:33 9Dec
-Dec  9 21:39:24 9Dec
-Dec 10 11:55:54 10Dec
-Dec 10 11:55:58 10Dec
-Dec 10 20:35:33 10Dec
-Dec 11 20:35:33 11Dec
-Dec 12 20:35:33 12Dec
+Dec  9 21:39:24 alicia-VirtualBox systemd-logind[505]: New seat seat0.
+Dec  9 21:39:24 alicia-VirtualBox systemd-logind[505]: Watching system buttons on /dev/input/event0 (Power Button)
+Dec  9 21:39:24 alicia-VirtualBox systemd-logind[505]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Dec  9 21:39:24 alicia-VirtualBox systemd-logind[505]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Dec  9 21:39:25 alicia-VirtualBox gdm-autologin]: gkr-pam: no password is available for user
+Dec  9 21:39:25 alicia-VirtualBox gdm-autologin]: pam_unix(gdm-autologin:session): session opened for user alicia by (uid=0)
+Dec  9 21:39:25 alicia-VirtualBox systemd-logind[505]: New session 1 of user alicia.
+Dec  9 21:39:25 alicia-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user alicia by (uid=0)
+Dec  9 21:39:26 alicia-VirtualBox gdm-autologin]: gkr-pam: gnome-keyring-daemon started properly
+Dec  9 21:39:31 alicia-VirtualBox gnome-keyring-daemon[691]: The PKCS#11 component was already initialized
+Dec  9 21:39:31 alicia-VirtualBox gnome-keyring-daemon[691]: The Secret Service was already initialized
+Dec  9 21:39:35 alicia-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:1 (system bus name :1.45 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Dec  9 21:42:03 alicia-VirtualBox systemd-logind[505]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Dec  9 21:42:03 alicia-VirtualBox systemd-logind[505]: Watching system buttons on /dev/input/event0 (Power Button)
+Dec  9 21:42:03 alicia-VirtualBox systemd-logind[505]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Dec  9 21:42:06 alicia-VirtualBox dbus-daemon[466]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec  9 21:43:00 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec  9 21:43:00 alicia-VirtualBox pkexec[1906]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec  9 22:07:56 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec  9 22:09:26 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec  9 22:09:26 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 11:55:54 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 11:55:58 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 11:55:58 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 11:55:58 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 12:05:15 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 12:05:30 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 12:05:30 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 12:05:30 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 12:10:57 alicia-VirtualBox gpasswd[22575]: user syslog added by root to group tty
+Dec 10 12:14:07 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 12:14:07 alicia-VirtualBox pkexec[40444]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 12:17:01 alicia-VirtualBox CRON[40487]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 12:17:01 alicia-VirtualBox CRON[40487]: pam_unix(cron:session): session closed for user root
+Dec 10 12:30:01 alicia-VirtualBox CRON[40795]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 12:30:01 alicia-VirtualBox CRON[40795]: pam_unix(cron:session): session closed for user root
+Dec 10 12:37:30 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 12:37:32 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 12:37:32 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 12:37:32 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 12:50:14 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 12:50:17 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 12:50:17 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 12:50:17 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 13:04:01 alicia-VirtualBox CRON[41328]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 13:04:01 alicia-VirtualBox CRON[41328]: pam_unix(cron:session): session closed for user root
+Dec 10 13:17:01 alicia-VirtualBox CRON[41344]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 13:17:01 alicia-VirtualBox CRON[41344]: pam_unix(cron:session): session closed for user root
+Dec 10 13:30:01 alicia-VirtualBox CRON[41356]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 13:30:01 alicia-VirtualBox CRON[41356]: pam_unix(cron:session): session closed for user root
+Dec 10 14:16:40 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 14:16:42 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 14:16:42 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 14:16:42 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 14:17:01 alicia-VirtualBox CRON[41655]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 14:17:01 alicia-VirtualBox CRON[41655]: pam_unix(cron:session): session closed for user root
+Dec 10 14:22:18 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 14:22:20 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 14:22:20 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 14:22:20 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 14:30:01 alicia-VirtualBox CRON[41766]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 14:30:01 alicia-VirtualBox CRON[41766]: pam_unix(cron:session): session closed for user root
+Dec 10 15:00:07 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 15:00:09 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 15:00:09 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 15:00:09 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 15:06:58 alicia-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 15:07:01 alicia-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 15:07:01 alicia-VirtualBox sudo:   alicia : TTY=pts/1 ; PWD=/home/alicia/Desktop ; USER=root ; COMMAND=/usr/bin/apt install vim
+Dec 10 15:07:01 alicia-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Dec 10 15:07:17 alicia-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Dec 10 15:08:07 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 15:08:07 alicia-VirtualBox pkexec[42660]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 15:13:30 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 15:13:32 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 15:13:32 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 15:13:32 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 15:13:57 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 15:13:57 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 15:14:22 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 15:14:22 alicia-VirtualBox pkexec[43302]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 15:14:23 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 15:14:23 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 15:17:01 alicia-VirtualBox CRON[43582]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 15:17:01 alicia-VirtualBox CRON[43582]: pam_unix(cron:session): session closed for user root
+Dec 10 15:17:10 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 15:17:10 alicia-VirtualBox pkexec[43603]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 15:30:01 alicia-VirtualBox CRON[43643]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 15:30:01 alicia-VirtualBox CRON[43643]: pam_unix(cron:session): session closed for user root
+Dec 10 15:30:35 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 15:30:37 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 15:30:37 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 15:30:37 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 16:17:01 alicia-VirtualBox CRON[43761]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 16:17:01 alicia-VirtualBox CRON[43761]: pam_unix(cron:session): session closed for user root
+Dec 10 16:21:59 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 16:22:02 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 16:22:02 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 16:22:02 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 16:30:01 alicia-VirtualBox CRON[43840]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 16:30:01 alicia-VirtualBox CRON[43840]: pam_unix(cron:session): session closed for user root
+Dec 10 16:31:08 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 16:31:10 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 16:31:10 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 16:31:10 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 16:43:28 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 16:43:31 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 16:43:31 alicia-VirtualBox gnome-keyring-daemon[691]: couldn't initialize slot with master password: The password or PIN is incorrect
+Dec 10 16:43:31 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 16:56:56 alicia-VirtualBox systemd-logind[505]: System is rebooting.
+Dec 10 16:57:18 alicia-VirtualBox systemd-logind[606]: New seat seat0.
+Dec 10 16:57:18 alicia-VirtualBox systemd-logind[606]: Watching system buttons on /dev/input/event0 (Power Button)
+Dec 10 16:57:18 alicia-VirtualBox systemd-logind[606]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Dec 10 16:57:18 alicia-VirtualBox systemd-logind[606]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Dec 10 16:57:18 alicia-VirtualBox gdm-autologin]: gkr-pam: no password is available for user
+Dec 10 16:57:19 alicia-VirtualBox gdm-autologin]: pam_unix(gdm-autologin:session): session opened for user alicia by (uid=0)
+Dec 10 16:57:19 alicia-VirtualBox systemd-logind[606]: New session 1 of user alicia.
+Dec 10 16:57:19 alicia-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user alicia by (uid=0)
+Dec 10 16:57:20 alicia-VirtualBox gdm-autologin]: gkr-pam: gnome-keyring-daemon started properly
+Dec 10 16:57:24 alicia-VirtualBox gnome-keyring-daemon[805]: The PKCS#11 component was already initialized
+Dec 10 16:57:24 alicia-VirtualBox gnome-keyring-daemon[805]: The Secret Service was already initialized
+Dec 10 16:57:28 alicia-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:1 (system bus name :1.42 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Dec 10 16:57:38 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 16:57:38 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 16:57:45 alicia-VirtualBox dbus-daemon[571]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec 10 16:58:32 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 16:58:32 alicia-VirtualBox pkexec[2075]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 16:58:38 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 16:58:38 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 17:01:32 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 17:01:32 alicia-VirtualBox pkexec[2436]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 17:03:10 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 17:03:10 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 17:03:30 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 17:03:30 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 17:04:33 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 17:04:33 alicia-VirtualBox pkexec[3456]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 17:06:50 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 17:06:50 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 17:07:35 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 17:07:35 alicia-VirtualBox pkexec[3925]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 17:09:04 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 17:09:04 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 17:10:15 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 17:10:15 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 17:10:28 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 17:10:28 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 17:10:38 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 17:10:38 alicia-VirtualBox pkexec[5161]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 17:11:20 alicia-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 17:11:23 alicia-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 17:11:23 alicia-VirtualBox sudo:   alicia : TTY=pts/0 ; PWD=/tmp/mozilla_alicia0 ; USER=root ; COMMAND=/usr/bin/dpkg -i code_1.51.1-1605051630_amd64.deb
+Dec 10 17:11:23 alicia-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Dec 10 17:11:36 alicia-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Dec 10 17:12:19 alicia-VirtualBox dbus-daemon[571]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec 10 17:13:41 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 17:13:41 alicia-VirtualBox pkexec[5610]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 17:17:01 alicia-VirtualBox CRON[5831]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 17:17:01 alicia-VirtualBox CRON[5831]: pam_unix(cron:session): session closed for user root
+Dec 10 17:28:59 alicia-VirtualBox systemd-logind[670]: New seat seat0.
+Dec 10 17:28:59 alicia-VirtualBox systemd-logind[670]: Watching system buttons on /dev/input/event0 (Power Button)
+Dec 10 17:28:59 alicia-VirtualBox systemd-logind[670]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Dec 10 17:28:59 alicia-VirtualBox systemd-logind[670]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Dec 10 17:29:00 alicia-VirtualBox gdm-autologin]: gkr-pam: no password is available for user
+Dec 10 17:29:00 alicia-VirtualBox gdm-autologin]: pam_unix(gdm-autologin:session): session opened for user alicia by (uid=0)
+Dec 10 17:29:00 alicia-VirtualBox systemd-logind[670]: New session 1 of user alicia.
+Dec 10 17:29:00 alicia-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user alicia by (uid=0)
+Dec 10 17:29:01 alicia-VirtualBox gdm-autologin]: gkr-pam: gnome-keyring-daemon started properly
+Dec 10 17:29:05 alicia-VirtualBox gnome-keyring-daemon[830]: The Secret Service was already initialized
+Dec 10 17:29:05 alicia-VirtualBox gnome-keyring-daemon[830]: The PKCS#11 component was already initialized
+Dec 10 17:29:08 alicia-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:1 (system bus name :1.44 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Dec 10 17:29:22 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 10 17:29:22 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 10 17:29:27 alicia-VirtualBox dbus-daemon[637]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec 10 17:30:03 alicia-VirtualBox CRON[1928]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 17:30:03 alicia-VirtualBox CRON[1928]: pam_unix(cron:session): session closed for user root
+Dec 10 17:30:14 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 10 17:30:14 alicia-VirtualBox pkexec[1988]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 10 17:32:28 alicia-VirtualBox dbus-daemon[637]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec 10 17:43:24 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 17:43:27 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 17:43:27 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 18:16:19 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 18:16:26 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 18:16:26 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 18:17:01 alicia-VirtualBox CRON[2844]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 18:17:01 alicia-VirtualBox CRON[2844]: pam_unix(cron:session): session closed for user root
+Dec 10 18:30:01 alicia-VirtualBox CRON[2932]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 18:30:01 alicia-VirtualBox CRON[2932]: pam_unix(cron:session): session closed for user root
+Dec 10 18:37:31 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 18:37:33 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 18:37:33 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 18:57:23 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 18:57:27 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 18:57:27 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 19:17:01 alicia-VirtualBox CRON[3556]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 19:17:01 alicia-VirtualBox CRON[3556]: pam_unix(cron:session): session closed for user root
+Dec 10 19:30:02 alicia-VirtualBox CRON[4275]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 19:30:02 alicia-VirtualBox CRON[4275]: pam_unix(cron:session): session closed for user root
+Dec 10 19:36:36 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 19:36:39 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 19:36:39 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 19:45:02 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 19:45:07 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 19:45:07 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 20:17:01 alicia-VirtualBox CRON[5883]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 20:17:01 alicia-VirtualBox CRON[5883]: pam_unix(cron:session): session closed for user root
+Dec 10 20:30:02 alicia-VirtualBox CRON[6703]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 10 20:30:02 alicia-VirtualBox CRON[6703]: pam_unix(cron:session): session closed for user root
+Dec 10 20:35:30 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 20:35:33 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 20:35:33 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 21:12:36 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 21:12:41 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 10 21:12:41 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 10 21:13:37 alicia-VirtualBox systemd-logind[670]: System is powering down.
+Dec 11 15:23:05 alicia-VirtualBox systemd-logind[642]: New seat seat0.
+Dec 11 15:23:05 alicia-VirtualBox systemd-logind[642]: Watching system buttons on /dev/input/event0 (Power Button)
+Dec 11 15:23:05 alicia-VirtualBox systemd-logind[642]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Dec 11 15:23:05 alicia-VirtualBox systemd-logind[642]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Dec 11 15:23:06 alicia-VirtualBox gdm-autologin]: gkr-pam: no password is available for user
+Dec 11 15:23:07 alicia-VirtualBox gdm-autologin]: pam_unix(gdm-autologin:session): session opened for user alicia by (uid=0)
+Dec 11 15:23:07 alicia-VirtualBox systemd-logind[642]: New session 1 of user alicia.
+Dec 11 15:23:07 alicia-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user alicia by (uid=0)
+Dec 11 15:23:08 alicia-VirtualBox gdm-autologin]: gkr-pam: gnome-keyring-daemon started properly
+Dec 11 15:23:10 alicia-VirtualBox gnome-keyring-daemon[808]: The PKCS#11 component was already initialized
+Dec 11 15:23:10 alicia-VirtualBox gnome-keyring-daemon[808]: The Secret Service was already initialized
+Dec 11 15:23:13 alicia-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:1 (system bus name :1.44 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Dec 11 15:23:21 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 11 15:23:21 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 11 15:23:33 alicia-VirtualBox dbus-daemon[605]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec 11 15:24:20 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 11 15:24:20 alicia-VirtualBox pkexec[2218]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 11 15:24:24 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 11 15:24:24 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 11 15:27:21 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 11 15:27:21 alicia-VirtualBox pkexec[3283]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 11 15:30:01 alicia-VirtualBox CRON[3350]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 11 15:30:01 alicia-VirtualBox CRON[3350]: pam_unix(cron:session): session closed for user root
+Dec 11 15:30:18 alicia-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 15:30:43 alicia-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 15:30:43 alicia-VirtualBox sudo:   alicia : TTY=pts/1 ; PWD=/home/alicia/Desktop/SecureInternetTech ; USER=root ; COMMAND=/usr/bin/apt install git
+Dec 11 15:30:43 alicia-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Dec 11 15:31:42 alicia-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Dec 11 15:33:18 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 11 15:33:18 alicia-VirtualBox pkexec[4951]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 11 15:39:54 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 15:39:56 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 15:39:56 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 15:50:46 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 15:50:48 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 15:50:48 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 16:08:01 alicia-VirtualBox dbus-daemon[605]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec 11 16:14:05 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 16:14:07 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 16:14:07 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 16:17:01 alicia-VirtualBox CRON[5997]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 11 16:17:01 alicia-VirtualBox CRON[5997]: pam_unix(cron:session): session closed for user root
+Dec 11 16:19:15 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 16:19:17 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 16:19:17 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 16:25:31 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 16:25:33 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 16:25:33 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 16:30:01 alicia-VirtualBox CRON[6159]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 11 16:30:01 alicia-VirtualBox CRON[6159]: pam_unix(cron:session): session closed for user root
+Dec 11 16:53:21 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 16:53:25 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 16:53:25 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 17:17:02 alicia-VirtualBox CRON[6419]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 11 17:17:02 alicia-VirtualBox CRON[6419]: pam_unix(cron:session): session closed for user root
+Dec 11 17:30:01 alicia-VirtualBox CRON[6472]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 11 17:30:01 alicia-VirtualBox CRON[6472]: pam_unix(cron:session): session closed for user root
+Dec 11 17:36:40 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 17:36:47 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 17:36:47 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 18:17:01 alicia-VirtualBox CRON[6689]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 11 18:17:01 alicia-VirtualBox CRON[6689]: pam_unix(cron:session): session closed for user root
+Dec 11 18:23:22 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 18:23:24 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 18:23:24 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 18:30:01 alicia-VirtualBox CRON[6833]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 11 18:30:01 alicia-VirtualBox CRON[6833]: pam_unix(cron:session): session closed for user root
+Dec 11 18:42:57 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 11 18:43:01 alicia-VirtualBox gdm-password]: message repeated 2 times: [ pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory]
+Dec 11 18:43:01 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 11 18:59:48 alicia-VirtualBox systemd-logind[642]: System is powering down.
+Dec 21 13:30:22 alicia-VirtualBox systemd-logind[644]: New seat seat0.
+Dec 21 13:30:22 alicia-VirtualBox systemd-logind[644]: Watching system buttons on /dev/input/event0 (Power Button)
+Dec 21 13:30:22 alicia-VirtualBox systemd-logind[644]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Dec 21 13:30:22 alicia-VirtualBox systemd-logind[644]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Dec 21 13:30:23 alicia-VirtualBox gdm-autologin]: gkr-pam: no password is available for user
+Dec 21 13:30:24 alicia-VirtualBox gdm-autologin]: pam_unix(gdm-autologin:session): session opened for user alicia by (uid=0)
+Dec 21 13:30:24 alicia-VirtualBox systemd-logind[644]: New session 1 of user alicia.
+Dec 21 13:30:24 alicia-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user alicia by (uid=0)
+Dec 21 13:30:24 alicia-VirtualBox gdm-autologin]: gkr-pam: gnome-keyring-daemon started properly
+Dec 21 13:30:29 alicia-VirtualBox gnome-keyring-daemon[810]: The PKCS#11 component was already initialized
+Dec 21 13:30:29 alicia-VirtualBox gnome-keyring-daemon[810]: The Secret Service was already initialized
+Dec 21 13:30:33 alicia-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:1 (system bus name :1.43 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Dec 21 13:30:44 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 21 13:30:44 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 21 13:30:51 alicia-VirtualBox dbus-daemon[605]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec 21 13:31:42 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 21 13:31:42 alicia-VirtualBox pkexec[2444]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 21 13:31:46 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 21 13:31:46 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 21 13:34:40 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 21 13:34:40 alicia-VirtualBox pkexec[3359]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 21 13:37:38 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 21 13:37:38 alicia-VirtualBox pkexec[11460]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 21 13:40:43 alicia-VirtualBox dbus-daemon[605]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec 21 13:42:02 alicia-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 21 13:42:05 alicia-VirtualBox sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 21 13:42:05 alicia-VirtualBox sudo:   alicia : TTY=pts/0 ; PWD=/home/alicia/Desktop/task8cloud ; USER=root ; COMMAND=/usr/bin/apt install azure-cli
+Dec 21 13:42:05 alicia-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Dec 21 13:43:37 alicia-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Dec 21 13:43:39 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 21 13:43:39 alicia-VirtualBox pkexec[14808]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 21 14:17:01 alicia-VirtualBox CRON[15030]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 21 14:17:01 alicia-VirtualBox CRON[15030]: pam_unix(cron:session): session closed for user root
+Dec 21 14:25:33 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 21 14:25:36 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 21 14:25:36 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 21 14:25:57 alicia-VirtualBox systemd-logind[644]: System is powering down.
+Dec 28 11:24:53 alicia-VirtualBox systemd-logind[649]: New seat seat0.
+Dec 28 11:24:53 alicia-VirtualBox systemd-logind[649]: Watching system buttons on /dev/input/event0 (Power Button)
+Dec 28 11:24:53 alicia-VirtualBox systemd-logind[649]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Dec 28 11:24:53 alicia-VirtualBox systemd-logind[649]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Dec 28 11:24:54 alicia-VirtualBox gdm-autologin]: gkr-pam: no password is available for user
+Dec 28 11:24:55 alicia-VirtualBox gdm-autologin]: pam_unix(gdm-autologin:session): session opened for user alicia by (uid=0)
+Dec 28 11:24:55 alicia-VirtualBox systemd-logind[649]: New session 1 of user alicia.
+Dec 28 11:24:55 alicia-VirtualBox systemd: pam_unix(systemd-user:session): session opened for user alicia by (uid=0)
+Dec 28 11:24:55 alicia-VirtualBox gdm-autologin]: gkr-pam: gnome-keyring-daemon started properly
+Dec 28 11:24:58 alicia-VirtualBox gnome-keyring-daemon[819]: The PKCS#11 component was already initialized
+Dec 28 11:24:58 alicia-VirtualBox gnome-keyring-daemon[819]: The Secret Service was already initialized
+Dec 28 11:25:01 alicia-VirtualBox polkitd(authority=local): Registered Authentication Agent for unix-session:1 (system bus name :1.43 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Dec 28 11:25:13 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 28 11:25:13 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 28 11:25:21 alicia-VirtualBox dbus-daemon[611]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Dec 28 11:26:07 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 28 11:26:07 alicia-VirtualBox pkexec[2178]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 28 11:26:16 alicia-VirtualBox PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Dec 28 11:26:16 alicia-VirtualBox PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Dec 28 11:29:09 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 28 11:29:09 alicia-VirtualBox pkexec[2617]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Dec 28 11:30:01 alicia-VirtualBox CRON[2724]: pam_unix(cron:session): session opened for user root by (uid=0)
+Dec 28 11:30:01 alicia-VirtualBox CRON[2724]: pam_unix(cron:session): session closed for user root
+Dec 28 11:40:07 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 28 11:40:11 alicia-VirtualBox gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Dec 28 11:40:11 alicia-VirtualBox gdm-password]: gkr-pam: unlocked login keyring
+Dec 28 11:44:08 alicia-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Dec 28 11:44:08 alicia-VirtualBox pkexec[4717]: alicia: Executing command [USER=root] [TTY=unknown] [CWD=/home/alicia] [COMMAND=/usr/lib/update-notifier/package-system-locked]
