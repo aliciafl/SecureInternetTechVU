@@ -64,7 +64,9 @@ h2 {
 	overflow-x: auto;
 	height:auto;
 	max-height: 200px;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
+	padding: 7px 7px 7px 7px;
+	background-color: rgb(239, 238, 238);
 }
 
 ::-webkit-scrollbar {
