@@ -11,6 +11,8 @@ def readFile(fileName):
 def monthsConversion(month):
     months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     return months[int(month)-1]
+
+# ********************************************* HTML *********************************************
  
 def generatePage(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogData,dpkgData):
     authDateString,authDataString=codeString(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogData,dpkgData)
@@ -49,6 +51,8 @@ def generatePage(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogD
     f.close()
     webbrowser.open_new_tab('presentation.html')
 
+# ********************************************* Info generation *********************************************
+
 def codeString(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogData,dpkgData):
     months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     monthsDefs=[]
@@ -76,6 +80,7 @@ def codeString(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogDat
     for month in monthsDefs:       
         for i in range(31):   
 
+            # Auth.log file
             k=0
             for auth in authDate:
                 dat=auth.split()[1] #Number
@@ -88,6 +93,7 @@ def codeString(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogDat
                     dataString=dataString+"""<h1>"""+"Auth.log"+"""</h1><br/><div id="logblock">"""+str(authDatas)+"""</div>"""               
                 k=k+1
             
+            # Syslog file
             k=0
             for auth in syslogDate:
                 dat=auth.split()[1] #Number
@@ -101,6 +107,7 @@ def codeString(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogDat
                     dataString=dataString+"""<h1>"""+"Syslog"+"""</h1><br/><div id="logblock">"""+str(syslogDatas)+"""</div>"""               
                 k=k+1 
             
+            # Kern.log file
             k=0
             for auth in kernDate:
                 dat=auth.split()[1] #Number
@@ -114,6 +121,7 @@ def codeString(authDate,kernDate,syslogDate,dpkgDate,authData,kernData,syslogDat
                     dataString=dataString+"""<h1>"""+"Kern.log"+"""</h1><br/><div id="logblock">"""+str(kernDatas)+"""</div>"""             
                 k=k+1
 
+            # Dpkg.log file
             k=0
             for auth in dpkgDate:
                 dat=auth.split()[1] #Number
