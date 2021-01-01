@@ -1,108 +1,0 @@
-Log started: 2020-12-21  13:34:06
-Selecting previously unselected package linux-modules-5.4.0-58-generic.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 184752 files and directories currently installed.)
-Preparing to unpack .../0-linux-modules-5.4.0-58-generic_5.4.0-58.64_amd64.deb ...
-Unpacking linux-modules-5.4.0-58-generic (5.4.0-58.64) ...
-Selecting previously unselected package linux-image-5.4.0-58-generic.
-Preparing to unpack .../1-linux-image-5.4.0-58-generic_5.4.0-58.64_amd64.deb ...
-Unpacking linux-image-5.4.0-58-generic (5.4.0-58.64) ...
-Selecting previously unselected package linux-modules-extra-5.4.0-58-generic.
-Preparing to unpack .../2-linux-modules-extra-5.4.0-58-generic_5.4.0-58.64_amd64.deb ...
-Unpacking linux-modules-extra-5.4.0-58-generic (5.4.0-58.64) ...
-Preparing to unpack .../3-linux-generic-hwe-20.04_5.4.0.58.61_amd64.deb ...
-Unpacking linux-generic-hwe-20.04 (5.4.0.58.61) over (5.4.0.53.56) ...
-Preparing to unpack .../4-linux-image-generic-hwe-20.04_5.4.0.58.61_amd64.deb ...
-Unpacking linux-image-generic-hwe-20.04 (5.4.0.58.61) over (5.4.0.53.56) ...
-Selecting previously unselected package linux-headers-5.4.0-58.
-Preparing to unpack .../5-linux-headers-5.4.0-58_5.4.0-58.64_all.deb ...
-Unpacking linux-headers-5.4.0-58 (5.4.0-58.64) ...
-Selecting previously unselected package linux-headers-5.4.0-58-generic.
-Preparing to unpack .../6-linux-headers-5.4.0-58-generic_5.4.0-58.64_amd64.deb ...
-Unpacking linux-headers-5.4.0-58-generic (5.4.0-58.64) ...
-Preparing to unpack .../7-linux-headers-generic-hwe-20.04_5.4.0.58.61_amd64.deb ...
-Unpacking linux-headers-generic-hwe-20.04 (5.4.0.58.61) over (5.4.0.53.56) ...
-Setting up linux-modules-5.4.0-58-generic (5.4.0-58.64) ...
-Setting up linux-headers-5.4.0-58 (5.4.0-58.64) ...
-Setting up linux-headers-5.4.0-58-generic (5.4.0-58.64) ...
-Setting up linux-image-5.4.0-58-generic (5.4.0-58.64) ...
-I: /boot/vmlinuz.old is now a symlink to vmlinuz-5.4.0-53-generic
-I: /boot/initrd.img.old is now a symlink to initrd.img-5.4.0-53-generic
-I: /boot/vmlinuz is now a symlink to vmlinuz-5.4.0-58-generic
-I: /boot/initrd.img is now a symlink to initrd.img-5.4.0-58-generic
-Setting up linux-headers-generic-hwe-20.04 (5.4.0.58.61) ...
-Setting up linux-modules-extra-5.4.0-58-generic (5.4.0-58.64) ...
-Setting up linux-image-generic-hwe-20.04 (5.4.0.58.61) ...
-Setting up linux-generic-hwe-20.04 (5.4.0.58.61) ...
-Processing triggers for linux-image-5.4.0-58-generic (5.4.0-58.64) ...
-/etc/kernel/postinst.d/initramfs-tools:
-update-initramfs: Generating /boot/initrd.img-5.4.0-58-generic
-/etc/kernel/postinst.d/zz-update-grub:
-Sourcing file `/etc/default/grub'
-Sourcing file `/etc/default/grub.d/init-select.cfg'
-Generating grub configuration file ...
-Found linux image: /boot/vmlinuz-5.4.0-58-generic
-Found initrd image: /boot/initrd.img-5.4.0-58-generic
-Found linux image: /boot/vmlinuz-5.4.0-53-generic
-Found initrd image: /boot/initrd.img-5.4.0-53-generic
-Found linux image: /boot/vmlinuz-5.4.0-42-generic
-Found initrd image: /boot/initrd.img-5.4.0-42-generic
-Found memtest86+ image: /boot/memtest86+.elf
-Found memtest86+ image: /boot/memtest86+.bin
-done
-Log ended: 2020-12-21  13:35:21
-
-Log started: 2020-12-21  13:35:22
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 221134 files and directories currently installed.)
-Preparing to unpack .../wireless-regdb_2020.11.20-0ubuntu1~20.04.1_all.deb ...
-Unpacking wireless-regdb (2020.11.20-0ubuntu1~20.04.1) over (2018.05.09-0ubuntu1) ...
-Setting up wireless-regdb (2020.11.20-0ubuntu1~20.04.1) ...
-Processing triggers for man-db (2.9.1-1) ...
-Log ended: 2020-12-21  13:35:28
-
-Log started: 2020-12-21  13:35:28
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 221134 files and directories currently installed.)
-Preparing to unpack .../firefox_84.0+build3-0ubuntu0.20.04.1_amd64.deb ...
-Unpacking firefox (84.0+build3-0ubuntu0.20.04.1) over (83.0+build2-0ubuntu0.20.04.1) ...
-Setting up firefox (84.0+build3-0ubuntu0.20.04.1) ...
-Installing new version of config file /etc/apparmor.d/usr.bin.firefox ...
-Please restart all running instances of firefox, or you will experience problems.
-Processing triggers for man-db (2.9.1-1) ...
-Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
-Processing triggers for mime-support (3.64ubuntu1) ...
-Processing triggers for hicolor-icon-theme (0.17-2) ...
-Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
-Log ended: 2020-12-21  13:35:41
-
-Log started: 2020-12-21  13:35:41
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 221134 files and directories currently installed.)
-Preparing to unpack .../firefox-locale-en_84.0+build3-0ubuntu0.20.04.1_amd64.deb ...
-Unpacking firefox-locale-en (84.0+build3-0ubuntu0.20.04.1) over (83.0+build2-0ubuntu0.20.04.1) ...
-Setting up firefox-locale-en (84.0+build3-0ubuntu0.20.04.1) ...
-Log ended: 2020-12-21  13:35:46
-
-Log started: 2020-12-28  11:41:25
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 237370 files and directories currently installed.)
-Removing linux-headers-5.4.0-42-generic (5.4.0-42.46) ...
-Removing linux-headers-5.4.0-42 (5.4.0-42.46) ...
-Log ended: 2020-12-28  11:41:32
-
-Log started: 2020-12-28  11:41:32
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 207611 files and directories currently installed.)
-Removing linux-modules-extra-5.4.0-42-generic (5.4.0-42.46) ...
-Removing linux-image-5.4.0-42-generic (5.4.0-42.46) ...
-/etc/kernel/postrm.d/initramfs-tools:
-update-initramfs: Deleting /boot/initrd.img-5.4.0-42-generic
-/etc/kernel/postrm.d/zz-update-grub:
-Sourcing file `/etc/default/grub'
-Sourcing file `/etc/default/grub.d/init-select.cfg'
-Generating grub configuration file ...
-Found linux image: /boot/vmlinuz-5.4.0-58-generic
-Found initrd image: /boot/initrd.img-5.4.0-58-generic
-Found linux image: /boot/vmlinuz-5.4.0-53-generic
-Found initrd image: /boot/initrd.img-5.4.0-53-generic
-Found memtest86+ image: /boot/memtest86+.elf
-Found memtest86+ image: /boot/memtest86+.bin
-done
-Removing linux-modules-5.4.0-42-generic (5.4.0-42.46) ...
-Log ended: 2020-12-28  11:41:45
-

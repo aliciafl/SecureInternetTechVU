@@ -7,7 +7,7 @@ The project consists in an event timeline drawing based on some **/var/log** con
 
 ## About the project
 
-To analyze those log files a script written in **Python** is used. 
+To analyze those log files a script written in **Python** is used. The timeline has been created from third party code that is linked at the end of the readme.
 
 The script has a feature of asking the user for the first and last date to define the interval that he wants to analyze. This is an optional functionality and if you want to analyze all the content of the logs without filtering by date, you can leave the answer blank.
 
@@ -17,9 +17,21 @@ The inserted dates must have the following format: *Month with the first three l
 As mentioned, the format is validated in such a way that if it is not respected, it will be asked again. In addition, it is also checked that the start date is prior to the end. 
 
 ### Algorithm operation
-The content of the files is then read, filtered by date range, if these have been chosen by the user. Next, two arrays are generated ...
+The content of the files is read, filtered by date range, if these have been chosen by the user. Next, two arrays are generated for each analyzed log. An array whose elements are strings that includes all the events that occurred on the same day. The other array contains the days associated with the events in such a way that they are associated by the position in which they are found. 
+
+Finally, the necessary html tags are added and the html file is generated together with the style.css and the code.js
 
 ### Supported logs
+
+There is a problem with log files and it is the absence of a standardized format. Our python script is capable of processing the following two formats:
+
+Format 1: MMM DD hh-mm-ss info
+Example : Dec 12 21:39:24 ...
+
+Format 2: YYYY-MM-DD hh-mm-ss info
+Example : 2020-07-31 16:27:13 ...
+
+As already mentioned, currently, the script only supports the logs indicated before but if it was necessary to analyze another log with the same format, the main function could be modified, changing the path of the new log and indicating if it is format 1 or 2.
 
  - **Auth.log**
 All authentication related events in Debian and Ubuntu server are logged here. This log can be used to investigate brute-force attacks and other vulnerabilities related to user authorization mechanism.
