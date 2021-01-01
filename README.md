@@ -23,16 +23,6 @@ Finally, the necessary html tags are added and the html file is generated togeth
 
 ### Supported logs
 
-There is a problem with log files and it is the absence of a standardized format. Our python script is capable of processing the following two formats:
-
- - Format 1: MMM DD hh-mm-ss info. 
-Example : Dec 12 21:39:24 ...
-
- - Format 2: YYYY-MM-DD hh-mm-ss info. 
-Example : 2020-07-31 16:27:13 ...
-
-As already mentioned, currently, the script only supports the logs indicated before but if it was necessary to analyze another log with the same format, the main function could be modified, changing the path of the new log and indicating if it is format 1 or 2.
-
  - **Auth.log**
 All authentication related events in Debian and Ubuntu server are logged here. This log can be used to investigate brute-force attacks and other vulnerabilities related to user authorization mechanism.
 
@@ -44,6 +34,16 @@ This log is extremely detailed as it includes each of the stages that a package 
 
  - **Syslog**
 It shows general messages, except of type auth, and info regarding the system. Basically a data log of all activity throughout the global system. 
+
+There is a problem with log files and it is the absence of a standardized format. Our python script is capable of processing the following two formats:
+
+ - Format 1: MMM DD hh-mm-ss info. 
+Example : Dec 12 21:39:24 ...
+
+ - Format 2: YYYY-MM-DD hh-mm-ss info. 
+Example : 2020-07-31 16:27:13 ...
+
+As already mentioned, currently, the script only supports the logs indicated before but if it was necessary to analyze another log with the same format, the main function could be modified, changing the path of the new log and indicating if it is format 1 or 2.
 
 *For convenience, some examples of these files have been included in the project, but if we wanted to apply it to the analysis of the real logs in Linux, we would have to put the path correctly in the code, in particular in the "main" function.
 
