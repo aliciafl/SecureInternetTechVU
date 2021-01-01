@@ -1,13 +1,8 @@
-/* ----------------------------------
-jQuery Timelinr 0.9.54
-tested with jQuery v1.6+
-
-Copyright 2011, CSSLab.cl
+/*      Copyright 2011, CSSLab.cl
 Free under the MIT license.
 https://www.opensource.org/licenses/mit-license.php
+instructions: http://www.csslab.cl/2011/08/18/jquery-timelinr/       */
 
-instructions: http://www.csslab.cl/2011/08/18/jquery-timelinr/
----------------------------------- */
 jQuery.fn.timelinr = function(options) {
     // default plugin settings
     settings = jQuery.extend({
