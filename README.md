@@ -25,10 +25,10 @@ Finally, the necessary html tags are added and the html file is generated togeth
 
 There is a problem with log files and it is the absence of a standardized format. Our python script is capable of processing the following two formats:
 
- - Format 1: MMM DD hh-mm-ss info
+ - Format 1: MMM DD hh-mm-ss info. 
 Example : Dec 12 21:39:24 ...
 
- - Format 2: YYYY-MM-DD hh-mm-ss info
+ - Format 2: YYYY-MM-DD hh-mm-ss info. 
 Example : 2020-07-31 16:27:13 ...
 
 As already mentioned, currently, the script only supports the logs indicated before but if it was necessary to analyze another log with the same format, the main function could be modified, changing the path of the new log and indicating if it is format 1 or 2.
